@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch204epm24e76"]
+[gd_scene load_steps=4 format=3 uid="uid://ch204epm24e76"]
 
 [ext_resource type="PackedScene" uid="uid://18nsy6kkteuo" path="res://Player.tscn" id="1_wkfx8"]
 [ext_resource type="PackedScene" uid="uid://3f0ltq56eu4l" path="res://Tree.tscn" id="2_br4kr"]
+[ext_resource type="PackedScene" uid="uid://dq8gvnyvaqefm" path="res://Mob.tscn" id="3_4kqkr"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -14,6 +15,18 @@ offset_bottom = 1099.0
 [node name="Player" parent="." instance=ExtResource("1_wkfx8")]
 y_sort_enabled = true
 position = Vector2(912, 642)
+
+[node name="Mob" parent="." instance=ExtResource("3_4kqkr")]
+position = Vector2(605, 280)
+
+[node name="Mob2" parent="." instance=ExtResource("3_4kqkr")]
+position = Vector2(1198, 428)
+
+[node name="Mob3" parent="." instance=ExtResource("3_4kqkr")]
+position = Vector2(1295, 886)
+
+[node name="Mob4" parent="." instance=ExtResource("3_4kqkr")]
+position = Vector2(727, 908)
 
 [node name="Tree" parent="." instance=ExtResource("2_br4kr")]
 position = Vector2(201, 888)
