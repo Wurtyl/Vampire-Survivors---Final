@@ -20,16 +20,16 @@ y_sort_enabled = true
 position = Vector2(912, 642)
 
 [node name="Mob" parent="." instance=ExtResource("3_4kqkr")]
-position = Vector2(618, 303)
+position = Vector2(575, 256)
 
 [node name="Mob2" parent="." instance=ExtResource("3_4kqkr")]
-position = Vector2(1220, 424)
+position = Vector2(1566, 310)
 
 [node name="Mob3" parent="." instance=ExtResource("3_4kqkr")]
-position = Vector2(1310, 810)
+position = Vector2(1366, 958)
 
 [node name="Mob4" parent="." instance=ExtResource("3_4kqkr")]
-position = Vector2(749, 927)
+position = Vector2(491, 994)
 
 [node name="Tree" parent="." instance=ExtResource("2_br4kr")]
 position = Vector2(201, 888)
