@@ -19,4 +19,4 @@ func take_damage():
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
-		smoke.global_position = global_position
+		smoke.global_position = global_position 
