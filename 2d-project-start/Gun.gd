@@ -13,6 +13,5 @@ func shoot():
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
 	%ShootingPoint.add_child(new_bullet)
 
-
 func _on_timer_timeout():
 	shoot()
