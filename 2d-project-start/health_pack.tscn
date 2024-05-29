@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://3ssbfyiq6m6i"]
 
 [ext_resource type="Script" path="res://health_pack.gd" id="1_d0asu"]
-[ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://characters/slime/slime_body_hurt.png" id="2_y0hqd"]
+[ext_resource type="Texture2D" uid="uid://dhl6m1tr6k5l" path="res://bloood-drop-export.png" id="2_8864s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2oevr"]
-radius = 43.4166
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7fpia"]
+radius = 19.0
+height = 76.0
 
 [node name="HealthPack" type="Area2D" groups=["Health"]]
 collision_layer = 2
@@ -12,7 +13,9 @@ collision_mask = 2
 script = ExtResource("1_d0asu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_y0hqd")
+position = Vector2(-16, -11)
+texture = ExtResource("2_8864s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2oevr")
+position = Vector2(1, -7)
+shape = SubResource("CapsuleShape2D_7fpia")

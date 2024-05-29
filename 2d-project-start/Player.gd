@@ -14,7 +14,7 @@ func _physics_process(delta):
 	else:
 		%HappyBoo.play_idle_animation()
 
-	const DAMAGE_RATE = 10.0
+	const DAMAGE_RATE = 25.0
 	var overlapping_mobs = %HitBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
@@ -29,5 +29,5 @@ func set_health(new_health: int) -> void:
 
 func _on_hit_box_area_entered(area):
 	if area.is_in_group("Health"):
-		set_health(health + 10)
+		set_health(health + 5)
 		area.queue_free()

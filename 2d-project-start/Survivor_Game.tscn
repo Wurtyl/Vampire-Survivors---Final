@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch204epm24e76"]
+[gd_scene load_steps=5 format=3 uid="uid://ch204epm24e76"]
 
 [ext_resource type="Script" path="res://Survivor_Game.gd" id="1_rt8ap"]
 [ext_resource type="PackedScene" uid="uid://18nsy6kkteuo" path="res://Player.tscn" id="1_wkfx8"]
 [ext_resource type="PackedScene" uid="uid://3f0ltq56eu4l" path="res://Tree.tscn" id="2_br4kr"]
-[ext_resource type="PackedScene" uid="uid://3ssbfyiq6m6i" path="res://health_pack.tscn" id="4_thcjg"]
 
 [sub_resource type="Curve2D" id="Curve2D_fbbwt"]
 _data = {
@@ -92,9 +91,6 @@ theme_override_font_sizes/font_size = 156
 text = "Game Over !
 You Suck >:("
 horizontal_alignment = 1
-
-[node name="HealthPack" parent="." instance=ExtResource("4_thcjg")]
-position = Vector2(570, 292)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj0oh7ijkxpeu"]
 
 [ext_resource type="Script" path="res://Bullet.gd" id="1_d4kuq"]
-[ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://pistol/projectile.png" id="2_e2fj0"]
+[ext_resource type="Texture2D" uid="uid://dsinlr00wfhu5" path="res://StakeImprove.png" id="2_qrkkm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mc04p"]
 radius = 28.0179
@@ -15,10 +15,10 @@ collision_mask = 3
 script = ExtResource("1_d4kuq")
 
 [node name="Projectile" type="Sprite2D" parent="."]
-position = Vector2(-20.0339, -1.62517)
-rotation = -0.021104
-scale = Vector2(1.80975, 1.7132)
-texture = ExtResource("2_e2fj0")
+position = Vector2(21.285, 45.5724)
+rotation = 1.55013
+scale = Vector2(5.47288, 5.27523)
+texture = ExtResource("2_qrkkm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.9811, 1.01855)
