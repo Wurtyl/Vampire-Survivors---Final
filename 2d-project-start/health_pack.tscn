@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://3ssbfyiq6m6i"]
+
+[ext_resource type="Script" path="res://health_pack.gd" id="1_d0asu"]
+[ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://characters/slime/slime_body_hurt.png" id="2_y0hqd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2oevr"]
+radius = 43.4166
+
+[node name="HealthPack" type="Area2D" groups=["Health"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_d0asu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_y0hqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2oevr")

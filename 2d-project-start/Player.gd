@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_depleted
 
-var health = 100.0
+var health := 100.0
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -21,3 +21,13 @@ func _physics_process(delta):
 		%HealthBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+
+func set_health(new_health: int) -> void:
+	health = new_health
+	get_node("%HealthBar").value = health
+
+
+func _on_hit_box_area_entered(area):
+	if area.is_in_group("Health"):
+		set_health(health + 10)
+		area.queue_free()

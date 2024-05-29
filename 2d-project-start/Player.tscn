@@ -59,3 +59,5 @@ theme_override_styles/background = SubResource("StyleBoxFlat_k6oks")
 theme_override_styles/fill = SubResource("StyleBoxFlat_wikc7")
 value = 100.0
 show_percentage = false
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
