@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://ca6tqit1f52h6"]
+
+[ext_resource type="Script" path="res://StartMenu.gd" id="1_jn4qa"]
+[ext_resource type="FontFile" uid="uid://dewdm1ve4ba2x" path="res://pixel_font.ttf" id="2_lt0qu"]
+[ext_resource type="Texture2D" uid="uid://dwoglx4jmgw24" path="res://red slice.png" id="3_0x6q0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dupf4"]
+texture = ExtResource("3_0x6q0")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p66jf"]
+texture = ExtResource("3_0x6q0")
+texture_margin_top = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nttr"]
+texture = ExtResource("3_0x6q0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic8ao"]
+texture = ExtResource("3_0x6q0")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2g2t"]
+texture = ExtResource("3_0x6q0")
+texture_margin_top = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ihqeg"]
+texture = ExtResource("3_0x6q0")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartMenu" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -254.0
+offset_top = -891.0
+offset_right = 258.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_jn4qa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenu"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="StartMenu/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_lt0qu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_dupf4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p66jf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2nttr")
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="StartMenu/VBoxContainer"]
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_lt0qu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_ic8ao")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w2g2t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ihqeg")
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -546.0
+offset_top = 193.0
+offset_right = 551.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.764706, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lt0qu")
+theme_override_font_sizes/font_size = 64
+text = "Vampire Guy :3"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="StartMenu/VBoxContainer/StartGameButton" to="StartMenu" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/QuitButton" to="StartMenu" method="_on_quit_button_pressed"]

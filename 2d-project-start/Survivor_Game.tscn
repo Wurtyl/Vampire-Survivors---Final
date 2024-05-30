@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch204epm24e76"]
+[gd_scene load_steps=6 format=3 uid="uid://ch204epm24e76"]
 
 [ext_resource type="Script" path="res://Survivor_Game.gd" id="1_rt8ap"]
 [ext_resource type="PackedScene" uid="uid://18nsy6kkteuo" path="res://Player.tscn" id="1_wkfx8"]
 [ext_resource type="PackedScene" uid="uid://3f0ltq56eu4l" path="res://Tree.tscn" id="2_br4kr"]
+[ext_resource type="PackedScene" uid="uid://dx7pdqd6b211" path="res://mausoleum.tscn" id="4_ngnmp"]
 
 [sub_resource type="Curve2D" id="Curve2D_fbbwt"]
 _data = {
@@ -21,6 +22,7 @@ layer = -1
 y_sort_enabled = true
 offset_right = 1933.0
 offset_bottom = 1099.0
+color = Color(0.145098, 0.145098, 0.145098, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_wkfx8")]
 y_sort_enabled = true
@@ -38,25 +40,25 @@ position = Vector2(-56, -56)
 position = Vector2(201, 888)
 
 [node name="Tree2" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(283, 916)
+position = Vector2(291, 262)
 
 [node name="Tree3" parent="." instance=ExtResource("2_br4kr")]
 position = Vector2(1548, 969)
 
 [node name="Tree4" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(1648, 467)
+position = Vector2(1623, 337)
 
 [node name="Tree5" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(444, 469)
+position = Vector2(590, 775)
 
 [node name="Tree6" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(1737, 441)
+position = Vector2(1340, 595)
 
 [node name="Tree7" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(1713, 507)
+position = Vector2(1730, 693)
 
 [node name="Tree8" parent="." instance=ExtResource("2_br4kr")]
-position = Vector2(1368, 237)
+position = Vector2(574, 337)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
@@ -91,6 +93,9 @@ theme_override_font_sizes/font_size = 156
 text = "Game Over !
 You Suck >:("
 horizontal_alignment = 1
+
+[node name="Mausoleum" parent="." instance=ExtResource("4_ngnmp")]
+position = Vector2(969, 555)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
