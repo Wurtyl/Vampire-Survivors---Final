@@ -20,6 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ehdep"]
 resource_name = "idle"
+length = 1.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

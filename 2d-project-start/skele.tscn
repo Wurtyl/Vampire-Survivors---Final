@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b40imnjpl43aj"]
+
+[ext_resource type="Texture2D" uid="uid://cjaon1irv37g8" path="res://skele.png" id="1_4pgdj"]
+
+[node name="Skele" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10.5, 10.5)
+scale = Vector2(1.32812, 1.32812)
+texture = ExtResource("1_4pgdj")

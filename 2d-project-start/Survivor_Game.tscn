@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch204epm24e76"]
+[gd_scene load_steps=8 format=3 uid="uid://ch204epm24e76"]
 
 [ext_resource type="Script" path="res://Survivor_Game.gd" id="1_rt8ap"]
 [ext_resource type="PackedScene" uid="uid://18nsy6kkteuo" path="res://Player.tscn" id="1_wkfx8"]
 [ext_resource type="PackedScene" uid="uid://3f0ltq56eu4l" path="res://Tree.tscn" id="2_br4kr"]
 [ext_resource type="PackedScene" uid="uid://dx7pdqd6b211" path="res://mausoleum.tscn" id="4_ngnmp"]
+[ext_resource type="FontFile" uid="uid://dewdm1ve4ba2x" path="res://pixel_font.ttf" id="4_vwtt7"]
+[ext_resource type="PackedScene" uid="uid://b40imnjpl43aj" path="res://skele.tscn" id="5_fg6fu"]
 
 [sub_resource type="Curve2D" id="Curve2D_fbbwt"]
 _data = {
@@ -22,7 +24,7 @@ layer = -1
 y_sort_enabled = true
 offset_right = 1933.0
 offset_bottom = 1099.0
-color = Color(0.376471, 0.376471, 0.376471, 1)
+color = Color(0.211765, 0.423529, 0.352941, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_wkfx8")]
 y_sort_enabled = true
@@ -89,6 +91,7 @@ offset_right = 465.5
 offset_bottom = 214.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_vwtt7")
 theme_override_font_sizes/font_size = 156
 text = "Game Over !
 You Suck >:("
@@ -96,6 +99,71 @@ horizontal_alignment = 1
 
 [node name="Mausoleum" parent="." instance=ExtResource("4_ngnmp")]
 position = Vector2(969, 555)
+
+[node name="Skele" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(1199, 348)
+
+[node name="Skele2" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(478, 488)
+rotation = -2.79282
+
+[node name="Skele3" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(1337, 868)
+rotation = 0.960472
+
+[node name="Grave" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(649, 1183)
+
+[node name="Grave2" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(-256, 678)
+
+[node name="Grave3" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(2210, 1423)
+
+[node name="Grave4" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(1112, 1683)
+
+[node name="Grave5" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(-25, 1537)
+
+[node name="Grave6" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(2810, 734)
+
+[node name="Grave7" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(2369, 423)
+
+[node name="Grave8" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(2670, -310)
+
+[node name="Grave9" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(1632, -352)
+
+[node name="Grave10" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(2178, -101)
+
+[node name="Grave11" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(661, -307)
+
+[node name="Grave12" parent="." instance=ExtResource("2_br4kr")]
+position = Vector2(-19, -279)
+
+[node name="Skele4" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(-412, 1252)
+
+[node name="Skele5" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(2372, 1172)
+
+[node name="Skele6" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(2194, 556)
+
+[node name="Skele7" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(1613, -212)
+
+[node name="Skele8" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(337, -345)
+
+[node name="Skele9" parent="." instance=ExtResource("5_fg6fu")]
+position = Vector2(-546, 55)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6r6oa811o1mp"]
+
+[ext_resource type="AudioStream" uid="uid://q484yildswct" path="res://Fluffing-a-Duck(chosic.com).mp3" id="1_2t5ag"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2t5ag")
+autoplay = true

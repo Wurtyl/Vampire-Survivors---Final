@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://18nsy6kkteuo"]
+[gd_scene load_steps=8 format=3 uid="uid://18nsy6kkteuo"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_6anwl"]
-[ext_resource type="PackedScene" uid="uid://c0lpkjco77qg7" path="res://wave_timer.tscn" id="2_dxlkc"]
 [ext_resource type="PackedScene" uid="uid://cxueqq7yjbhj" path="res://happy_boo.tscn" id="2_mqrxg"]
 [ext_resource type="PackedScene" uid="uid://chjhf8aj2neyq" path="res://Gun.tscn" id="3_u6a00"]
 
@@ -27,14 +26,6 @@ radius = 35.0143
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6anwl")
-
-[node name="WaveTimer" parent="." instance=ExtResource("2_dxlkc")]
-unique_name_in_owner = true
-z_index = 20
-offset_left = -18.0
-offset_top = -535.0
-offset_right = 22.0
-offset_bottom = -495.0
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
