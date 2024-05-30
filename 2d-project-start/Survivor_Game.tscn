@@ -22,7 +22,7 @@ layer = -1
 y_sort_enabled = true
 offset_right = 1933.0
 offset_bottom = 1099.0
-color = Color(0.145098, 0.145098, 0.145098, 1)
+color = Color(0.376471, 0.376471, 0.376471, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_wkfx8")]
 y_sort_enabled = true

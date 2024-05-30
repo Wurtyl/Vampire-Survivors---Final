@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxueqq7yjbhj"]
+
+[ext_resource type="Texture2D" uid="uid://c025p3wg8qvq5" path="res://Vamp-Sheet.png" id="1_8i3pl"]
+[ext_resource type="Script" path="res://happy_boo.gd" id="2_e27no"]
+
+[sub_resource type="Animation" id="Animation_f6164"]
+resource_name = "walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_ehdep"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xbihh"]
+_data = {
+"idle": SubResource("Animation_ehdep"),
+"walk": SubResource("Animation_f6164")
+}
+
+[node name="HappyBoo" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_8i3pl")
+hframes = 5
+script = ExtResource("2_e27no")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_xbihh")
+}
